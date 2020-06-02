@@ -1,0 +1,775 @@
+{
+  "intents": [
+    {
+      "intent": "Store_Hours",
+      "examples": [
+        {
+          "text": "What time do stores close?"
+        },
+        {
+          "text": "What are your hours?"
+        },
+        {
+          "text": "when does the showroom opens?"
+        },
+        {
+          "text": "What are the hours of operation?"
+        },
+        {
+          "text": "What are ur opening hours?"
+        }
+      ],
+      "description": "Find business hours."
+    },
+    {
+      "intent": "product_information",
+      "examples": [
+        {
+          "text": "What is the price of mg zs ev"
+        },
+        {
+          "text": "What is the price of mg hector"
+        },
+        {
+          "text": "led lamps"
+        },
+        {
+          "text": "fuel tank"
+        },
+        {
+          "text": "speakers"
+        },
+        {
+          "text": "precautions when driving"
+        },
+        {
+          "text": "models launched by mg"
+        },
+        {
+          "text": "history of mg motors"
+        }
+      ],
+      "description": "gives every detail about the product"
+    },
+    {
+      "intent": "Customer_Care",
+      "examples": [
+        {
+          "text": "Can I get some more information?"
+        },
+        {
+          "text": "How do I contact your office?"
+        },
+        {
+          "text": "customer care service?"
+        }
+      ],
+      "description": "Find basic contact information."
+    },
+    {
+      "intent": "greetings",
+      "examples": [
+        {
+          "text": "hii"
+        },
+        {
+          "text": "good afternoon"
+        },
+        {
+          "text": "good evening"
+        },
+        {
+          "text": "hello"
+        },
+        {
+          "text": "good morning"
+        },
+        {
+          "text": "hi"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "ending",
+      "examples": [
+        {
+          "text": "bubyee"
+        },
+        {
+          "text": "bye"
+        },
+        {
+          "text": "good bye"
+        },
+        {
+          "text": "see you"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Store_Location",
+      "examples": [
+        {
+          "text": "mg plants in india"
+        },
+        {
+          "text": "where is the main branch located in"
+        },
+        {
+          "text": "Where are you located?"
+        }
+      ],
+      "description": "Locate a physical store location or an address."
+    }
+  ],
+  "entities": [
+    {
+      "entity": "customer_care",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Can I get some more information?",
+          "synonyms": [
+            "more information",
+            "more details"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "How do I contact your office?",
+          "synonyms": [
+            "office contact number"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "customer care service",
+          "synonyms": [
+            "customer care",
+            "toll free number"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "ending",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "see you",
+          "synonyms": [
+            "bye",
+            "good bye"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "bye",
+          "synonyms": [
+            "Bye"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "bubyee",
+          "synonyms": [
+            "bubye",
+            "Bubyee"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "greetings",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "hello",
+          "synonyms": [
+            "Hello",
+            "heyy"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "good afternoon",
+          "synonyms": [
+            "gud afternoon",
+            "gd afternoon",
+            "ga"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "good morning",
+          "synonyms": [
+            "gud mrng",
+            "gud morning ",
+            "gd mrng",
+            "mrng",
+            "gm"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "hi",
+          "synonyms": [
+            "Hi",
+            "hii"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "good evening",
+          "synonyms": [
+            "ge",
+            "gud evng ",
+            "gd evng"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "store_Hours",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "What are your opening and closing hours?",
+          "synonyms": [
+            "when does the showroom opens",
+            "when does the showroom closes",
+            "working hours of showroom",
+            "working hours of shop"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "hours of operation",
+          "synonyms": [
+            "Hours of operation",
+            "What are the hours of operation?"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "store_location",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Where are Mg plants located",
+          "synonyms": [
+            "mg plants in india"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Where are you located?",
+          "synonyms": [
+            "In which cities you are located in?"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "where is mg office located",
+          "synonyms": [
+            "location of mg office"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    },
+    "from-sample": true
+  },
+  "webhooks": [
+    {
+      "url": "https://eu-gb.functions.cloud.ibm.com/api/v1/web/goggi.bhargav%40gmail.com_dev/default/Bhargav%20Funct.json",
+      "name": "main_webhook",
+      "headers": []
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "1800-1006464 is the contact of our office."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_2_1591100779704",
+      "conditions": "@customer_care:(How do I contact your office?)",
+      "dialog_node": "response_7_1591101111478",
+      "previous_sibling": "response_8_1591100807395"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "999249149 is the customer care contact."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_2_1591100779704",
+      "conditions": "@customer_care:(customer care service)",
+      "dialog_node": "response_9_1591102139745",
+      "previous_sibling": "response_7_1591101111478"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "sorry for the inconvenience caused. please contact 999249149 or post an email ststing your issue at pulsehub@mgmotor.co.in. Thank you"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_2_1591100779704",
+      "conditions": "anything_else",
+      "dialog_node": "response_7_1591112621794",
+      "previous_sibling": "response_9_1591102139745"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Yes please."
+              },
+              {
+                "text": "please go through \"www.mgmotor.co.in\" for more details."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_2_1591100779704",
+      "conditions": "@customer_care:(Can I get some more information?)",
+      "dialog_node": "response_8_1591100807395"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Please try again later",
+            "Sorry for the inconvenience. Try again later."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1590842607741",
+      "conditions": "anything_else",
+      "dialog_node": "response_1_1590843215413",
+      "previous_sibling": "response_3_1590843212915"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "\"<?$webhook_result_1.results[0].text?>\""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1590842607741",
+      "conditions": "$webhook_result_1",
+      "dialog_node": "response_3_1590843212915"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "We have dealers in many cities across india like Hyderabad, Bangalore,Mumbai, Chennai, Delhi and many more"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1591112863571",
+      "conditions": "@store_location:(Where are you located?)",
+      "dialog_node": "response_6_1591113663148",
+      "previous_sibling": "response_8_1591113636004"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "CHANDRAPURA INDUSTRIAL ESTATE, HALOL,District Panchmahal,Gujarat – 389351"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1591112863571",
+      "conditions": "@store_location:(Where are Mg plants located)",
+      "dialog_node": "response_8_1591113636004",
+      "previous_sibling": "response_6_1591113619832"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Weekdays : 10 am to 8 pm / weekends : 10 am to 5 pm"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1591112863571",
+      "conditions": "@store_Hours:(What are your opening and closing hours?)",
+      "dialog_node": "response_1_1591112981889",
+      "previous_sibling": "response_7_1591112913017"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "sorry for the inconvenience caused. please contact 999249149 or post an email ststing your issue at pulsehub@mgmotor.co.in. Thank you"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1591112863571",
+      "conditions": "anything_else",
+      "dialog_node": "response_10_1591113813975",
+      "previous_sibling": "response_6_1591113663148"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "10th Floor, 32nd Avenue,Saini Khera Village, Sector 15, Gurugram, Haryana 122022"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1591112863571",
+      "conditions": "@store_location:(where is mg office located)",
+      "dialog_node": "response_6_1591113619832",
+      "previous_sibling": "response_1_1591112981889"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "The showroom opens at 10 am everyday and closes at 8 pm on weekdays and 5 pm on weekends"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1591112863571",
+      "conditions": "@store_Hours:(hours of operation)",
+      "dialog_node": "response_7_1591112913017"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello! I'm MG assistant."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "Audio speaker system",
+            "options": [],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "disabled": true,
+      "dialog_node": "response_5_1591100130295"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Very good evening. How can I help you",
+            "Good evening user. Please enter your query."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_8_1590576933975",
+      "conditions": "@greetings:(good evening)",
+      "dialog_node": "response_2_1590754144200",
+      "previous_sibling": "response_10_1590753983030"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Good afternoon user. How can I help you?",
+            "Very good afternoon user. Please enter your query."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_8_1590576933975",
+      "conditions": "@greetings:(good afternoon)",
+      "dialog_node": "response_10_1590753983030",
+      "previous_sibling": "response_10_1590753980363"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Hi. I'm MG Assistant"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_8_1590576933975",
+      "conditions": "@greetings:hi",
+      "dialog_node": "response_3_1591111138098",
+      "previous_sibling": "response_2_1590754144200"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Hello there. How can I help you?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_8_1590576933975",
+      "conditions": "@greetings:hello",
+      "dialog_node": "response_1_1591111269917",
+      "previous_sibling": "response_3_1591111138098"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hii there, very good morning"
+              },
+              {
+                "text": "Good morning user. Please enter your query."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1590576933975",
+      "conditions": "@greetings:(good morning)",
+      "dialog_node": "response_10_1590753980363"
+    },
+    {
+      "type": "standard",
+      "title": "customer_qna",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@store_Hours:(hours of operation)",
+      "dialog_node": "node_7_1591112863571",
+      "previous_sibling": "node_2_1591100779704"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_8_1590590149780",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "Customer_care",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Customer_Care",
+      "dialog_node": "node_2_1591100779704",
+      "previous_sibling": "node_3_1590842607741"
+    },
+    {
+      "type": "standard",
+      "title": "greetings",
+      "metadata": {
+        "callout": {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "": ""
+          },
+          "result_variable": "webhook_result_1"
+        },
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#greetings",
+      "dialog_node": "node_8_1590576933975",
+      "previous_sibling": "node_7_1591112863571"
+    },
+    {
+      "type": "standard",
+      "title": "About_product",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "input": "<?input.text?>"
+          },
+          "result_variable": "webhook_result_1"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#product_information",
+      "dialog_node": "node_3_1590842607741",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "End",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Bye! Thank you for using"
+              },
+              {
+                "text": "Have a good day!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "#ending",
+      "dialog_node": "node_8_1590590149780",
+      "previous_sibling": "node_8_1590576933975"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello! I'm MG assistant."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "MyBot",
+  "language": "en",
+  "description": ""
+}
